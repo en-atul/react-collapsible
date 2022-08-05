@@ -1,0 +1,31 @@
+{
+  "name": "atul15r/@t-react-collapsible",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@t-react-collapsible"
+  },
+  "version": "0.0.1",
+  "description": "Collapsible Component for React",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "author": "atul",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/react": "^18.0.15",
+    "css-loader": "^6.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.77.2",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.7.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
