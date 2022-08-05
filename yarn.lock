@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@atul15r/react-collapsible@^0.0.1":
+  version "0.0.1"
+  resolved "https://npm.pkg.github.com/download/@atul15r/react-collapsible/0.0.1/8a59fa25e2a77ab6167b178b2f9d95733fc1ae44a38ded7117dbe14b31574900#a76dd5bd080bedfaf2e03c6eef716702cb30f69b"
+  integrity sha512-/njIuz1eA9JmPLIPP/lMoT9JbSCaFSSzv7Uf4wuukWpJSd0zqH9ckXrabh5oFp6HhveGMsqYFa2sR7XkHwQxXw==
+
 "@babel/code-frame@^7.16.7":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
