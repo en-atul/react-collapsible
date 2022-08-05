@@ -1,7 +1,7 @@
 {
-  "name": "atul15r/@t-react-collapsible",
+  "name": "atul15r/react-collapsible",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@t-react-collapsible"
+    "registry": "https://npm.pkg.github.com/react-collapsible"
   },
   "version": "0.0.1",
   "description": "Collapsible Component for React",
