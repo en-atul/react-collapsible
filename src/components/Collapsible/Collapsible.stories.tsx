@@ -14,13 +14,40 @@ const Template: ComponentStory<typeof Collapsible> = args => (
   <Collapsible {...args} />
 )
 
-export const HelloWorld = Template.bind({})
+const data = [
+  {
+    key: 1,
+    title: 'Collapsible One',
+    content:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
+  },
+  {
+    key: 2,
+    title: 'Collapsible Two',
+    content:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
+  },
+  {
+    key: 3,
+    title: 'Collapsible Three',
+    content:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
+  },
+  {
+    key: 4,
+    title: 'Collapsible Four',
+    content:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
+  },
+]
+
+export const Default = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-  label: 'Hello world!',
+Default.args = {
+  data,
 }
 
-export const ClickMe = Template.bind({})
-ClickMe.args = {
-  label: 'Click me!',
-}
+// export const ClickMe = Template.bind({})
+// ClickMe.args = {
+//   label: 'Click me!',
+// }
