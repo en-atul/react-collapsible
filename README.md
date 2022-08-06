@@ -1,6 +1,6 @@
 ## React Collapsible
 
-![Alt text](visual/react-collapsible.gif?raw=true "React Collapsible")
+![Alt text](visual/react-collapsible.png?raw=true "React Collapsible")
 
 
 ```
@@ -22,6 +22,9 @@
 
 # Normal Usage
 
+![Alt text](visual/react-collapsible.gif?raw=true "React Collapsible")
+
+
 ```
 <Collapsible 
  items={items}
@@ -31,6 +34,9 @@
 
 # Usage With Custom Icon Component
    >icon component can be HTMLElement (i.e. svg/image/div/section ...etc)/React-Component
+
+![Alt text](visual/react-collapsible-custom-icon.gif?raw=true "React Collapsible")
+
 
 ```
 <Collapsible 
@@ -42,17 +48,51 @@
 
 # Usage With Custom Styles
 
+- Purple
+
+![Alt text](visual/react-collapsible-purple.gif?raw=true "React Collapsible")
+
 ```
 <Collapsible 
  items={items}
- wrapperClassName="my-2" 
- itemClassName="bg-red-400 custom-class"
- itemContentStyle={{
-        padding:"0.8rem 1.2rem",
-        background:"#fafafa"
+ itemTitleStyle={{
+         background: `repeating-radial-gradient(
+    circle,
+    purple,
+    purple 10px,
+    #4b026f 10px,
+    #4b026f 20px
+  )`,
+  font-weight: 500,
+  color: "#fff"
  }}
- iconActiveColor="#039af4"
- iconInActiveColor="gray"
+ iconActiveColor="#fff"
+ iconInActiveColor="#fff"
+/>
+
+```
+
+- Fade Yellow
+
+![Alt text](visual/react-collapsible-yellow.gif?raw=true "React Collapsible")
+
+```
+<Collapsible 
+ items={items}
+ itemTitleStyle={{
+        background: `repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  ),
+  url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/3/old_map_@2X.png)`,
+  font-weight: 600,
+  color: "#000"
+ }}
+ iconActiveColor="#000"
+ iconInActiveColor="#000"
 />
 
 ```
