@@ -1,13 +1,10 @@
-import React, { FC } from 'react'
+import React, {FC} from 'react'
 
-
-export interface Props{
-  label:string
+export interface Props {
+  label: string
 }
 
- const Collapsible:FC<Props> =({label})=> {
-  return (
-    <div>Collapsible: {label}</div>
-  )
+const Collapsible: FC<Props> = ({label}) => {
+  return <div>Collapsible: {label}</div>
 }
 export default Collapsible
