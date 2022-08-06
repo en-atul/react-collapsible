@@ -19,6 +19,12 @@
   },
   "author": "atul",
   "license": "ISC",
+  "keywords": [
+    "react",
+    "react-collapsible",
+    "react-expandable",
+    "react-animated-collapsible"
+  ],
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
