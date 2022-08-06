@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-collapsible"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Collapsible Component for React",
   "scripts": {
     "build-storybook": "build-storybook",
@@ -23,7 +23,9 @@
     "react",
     "react-collapsible",
     "react-expandable",
-    "react-animated-collapsible"
+    "react-animated-collapsible",
+    "collapsible",
+    "accordion"
   ],
   "devDependencies": {
     "@babel/core": "^7.18.10",
