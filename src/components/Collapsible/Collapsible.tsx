@@ -61,7 +61,7 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
         style={{
           maxHeight: isOpen ? height : 0,
           transition: `${height}px 0.2s ease-out`,
-          overflow: 'auto',
+          overflow: 'clip',
           padding: isOpen ? '0.7rem 0.7rem' : '0 0.7rem',
         }}
       >
