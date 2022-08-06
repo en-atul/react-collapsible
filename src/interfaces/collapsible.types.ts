@@ -18,6 +18,6 @@ export interface CollapsibleItemProps {
   setKey: React.Dispatch<React.SetStateAction<number>>
   itemTitleClassName?: string
   itemContentClassName?: string
-  iconActiveColor?:string
-  iconInActiveColor?:string
+  iconActiveColor?: string
+  iconInActiveColor?: string
 }
