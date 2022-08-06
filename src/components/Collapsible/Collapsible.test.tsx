@@ -5,6 +5,6 @@ import Collapsible from './Collapsible'
 
 describe('Collapsible', () => {
   test('renders the Collapsible component', () => {
-    render(<Collapsible label="Hello world!" />)
+    render(<Collapsible items={[]} />)
   })
 })
