@@ -6,7 +6,7 @@
 ![Alt text](visual/react-collapsible.png?raw=true "React Collapsible")
 
 
-```
+``` js
  # If you use npm:
  npm i @atul15r/react-collapsible
 
@@ -28,7 +28,7 @@
 ![Alt text](visual/react-collapsible.gif?raw=true "React Collapsible")
 
 
-```
+``` js
 <Collapsible 
  items={items}
 />
@@ -41,7 +41,7 @@
 ![Alt text](visual/react-collapsible-custom-icon.gif?raw=true "React Collapsible")
 
 
-```
+``` js
 <Collapsible 
  items={items}
  icon={(isOpen)=> <IconComponent isOpen={isOpen}/>}
@@ -55,7 +55,7 @@
 
 ![Alt text](visual/react-collapsible-purple.gif?raw=true "React Collapsible")
 
-```
+``` js
 <Collapsible 
  items={items}
  itemTitleStyle={{
@@ -79,7 +79,7 @@
 
 ![Alt text](visual/react-collapsible-yellow.gif?raw=true "React Collapsible")
 
-```
+``` js
 <Collapsible 
  items={items}
  itemTitleStyle={{
