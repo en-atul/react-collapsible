@@ -1,4 +1,4 @@
-import {ReactNode} from 'react'
+import {CSSProperties, ReactNode} from 'react'
 
 export interface ItemProps {
   key: number
@@ -6,24 +6,26 @@ export interface ItemProps {
   content: ReactNode
 }
 
-export interface CollapsibleItemProps {
-  item: ItemProps
-  activeKey: number | undefined
-  setKey: React.Dispatch<React.SetStateAction<number | undefined>>
+export interface StyleProps {
   itemTitleClassName?: string
+  itemTitleStyle?: CSSProperties
   itemContentClassName?: string
+  itemContentStyle?: CSSProperties
   iconActiveColor?: string
   iconInActiveColor?: string
   icon?: (isOpen: boolean) => ReactNode
 }
 
-export interface CollapsibleProps {
+export interface CollapsibleItemProps extends StyleProps {
+  item: ItemProps
+  activeKey: number | undefined
+  setKey: React.Dispatch<React.SetStateAction<number | undefined>>
+}
+
+export interface CollapsibleProps extends StyleProps {
   items: ItemProps[]
   wrapperClassName?: string
+  wrapperStyle?: CSSProperties
   itemClassName?: string
-  itemTitleClassName?: string
-  itemContentClassName?: string
-  iconActiveColor?: string
-  iconInActiveColor?: string
-  icon?: (isOpen: boolean) => ReactNode
+  itemStyle?: CSSProperties
 }

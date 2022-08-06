@@ -14,6 +14,8 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
   iconActiveColor,
   iconInActiveColor,
   icon,
+  itemTitleStyle,
+  itemContentStyle,
 }) => {
   const contentRef = useRef(null)
   const [height, setHeight] = useState(0)
@@ -32,6 +34,7 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
           if (isOpen) setKey(undefined)
           else setKey(item.key)
         }}
+        style={itemTitleStyle}
       >
         <p>{item.title}</p>
         {icon ? (
@@ -48,10 +51,13 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
       <div
         className={`item-content ${itemContentClassName}`}
         style={{
-          maxHeight: isOpen ? height : 0,
-          transition: `${height}px 0.2s ease-out`,
-          overflow: 'clip',
-          padding: isOpen ? '0.7rem 0.7rem' : '0 0.7rem',
+          ...{
+            maxHeight: isOpen ? height : 0,
+            transition: `${height}px 0.2s ease-out`,
+            overflow: 'clip',
+            padding: isOpen ? '0.7rem 0.7rem' : '0 0.7rem',
+          },
+          ...itemContentStyle,
         }}
       >
         <div ref={contentRef}>{item.content}</div>
@@ -69,7 +75,10 @@ const Collapsible: FC<CollapsibleProps> = ({
   const [activeKey, setKey] = useState<undefined | number>()
 
   return (
-    <section className={`wrapper ${wrapperClassName}`}>
+    <section
+      className={`wrapper ${wrapperClassName}`}
+      style={rest.wrapperStyle}
+    >
       {items?.map((item, idx) => {
         const props = {
           item,
@@ -79,7 +88,11 @@ const Collapsible: FC<CollapsibleProps> = ({
         }
 
         return (
-          <article key={idx} className={`item ${itemClassName}`}>
+          <article
+            key={idx}
+            className={`item ${itemClassName}`}
+            style={rest.itemStyle}
+          >
             <CollapsibleItem {...props} />
           </article>
         )
