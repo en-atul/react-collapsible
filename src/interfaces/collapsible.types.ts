@@ -3,7 +3,7 @@ import {ReactNode} from 'react'
 export interface ItemProps {
   key: number
   title: string
-  content: string | ReactNode
+  content: ReactNode
 }
 export interface CollapsibleProps {
   items: ItemProps[]
@@ -11,13 +11,17 @@ export interface CollapsibleProps {
   itemClassName?: string
   itemTitleClassName?: string
   itemContentClassName?: string
+  iconActiveColor?: string
+  iconInActiveColor?: string
+  icon?: (isOpen: boolean) => ReactNode
 }
 export interface CollapsibleItemProps {
   item: ItemProps
-  activeKey: number
-  setKey: React.Dispatch<React.SetStateAction<number>>
+  activeKey: number | undefined
+  setKey: React.Dispatch<React.SetStateAction<number | undefined>>
   itemTitleClassName?: string
   itemContentClassName?: string
   iconActiveColor?: string
   iconInActiveColor?: string
+  icon?: (isOpen: boolean) => ReactNode
 }

@@ -13,6 +13,7 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
   itemContentClassName,
   iconActiveColor,
   iconInActiveColor,
+  icon,
 }) => {
   const contentRef = useRef(null)
   const [height, setHeight] = useState(0)
@@ -28,18 +29,21 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
       <button
         className={`item-title ${itemTitleClassName}`}
         onClick={() => {
-          if (isOpen) setKey(0)
+          if (isOpen) setKey(undefined)
           else setKey(item.key)
         }}
       >
         <p>{item.title}</p>
-
-        <ChevronRightIcon
-          classes={classNames('chevron', {
-            'chevron-active': isOpen,
-          })}
-          fillColor={isOpen ? iconActiveColor : iconInActiveColor}
-        />
+        {icon ? (
+          icon(isOpen)
+        ) : (
+          <ChevronRightIcon
+            classes={classNames('chevron', {
+              'chevron-active': isOpen,
+            })}
+            fillColor={isOpen ? iconActiveColor : iconInActiveColor}
+          />
+        )}
       </button>
       <div
         className={`item-content ${itemContentClassName}`}
@@ -60,10 +64,9 @@ const Collapsible: FC<CollapsibleProps> = ({
   items,
   wrapperClassName,
   itemClassName,
-  itemTitleClassName,
-  itemContentClassName,
+  ...rest
 }) => {
-  const [activeKey, setKey] = useState(0)
+  const [activeKey, setKey] = useState<undefined | number>()
 
   return (
     <section className={`wrapper ${wrapperClassName}`}>
@@ -72,8 +75,7 @@ const Collapsible: FC<CollapsibleProps> = ({
           item,
           activeKey,
           setKey,
-          itemTitleClassName,
-          itemContentClassName,
+          ...rest,
         }
 
         return (
