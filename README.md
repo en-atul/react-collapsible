@@ -19,7 +19,7 @@
 ```
 
 
-#Normal Usage
+# Normal Usage
 
 ```
 <Collapsible 
@@ -28,7 +28,7 @@
 
 ```
 
-#Usage With Custom Icon Component
+# Usage With Custom Icon Component
    >icon component can be HTMLElement (i.e. svg/image/div/section ...etc)/React-Component
 
 ```
@@ -39,7 +39,7 @@
 
 ```
 
-#Usage With Custom Styles
+# Usage With Custom Styles
 
 ```
 <Collapsible 
@@ -57,7 +57,7 @@
 ```
 
 
-#Props
+# Props
 
 | name                 | type   |          | default   | description                                                                                                                                       |
 |----------------------|--------|----------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
