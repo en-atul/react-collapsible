@@ -14,7 +14,7 @@
  import { Collapsible } from '@atul15r/react-collapsible';
 
  Commonjs Usage
- var InfiniteScroll = require('@atul15r/react-collapsible');
+ var Collapsible = require('@atul15r/react-collapsible');
 
 ```
 
