@@ -1,5 +1,6 @@
 ## React Collapsible
 
+![Alt text](visual/react-collapsible.gif?raw=true "React Collapsible")
 
 
 ```
