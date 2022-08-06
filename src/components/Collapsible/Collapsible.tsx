@@ -1,26 +1,18 @@
 import classNames from 'classnames'
-import React, {FC, ReactNode, useEffect, useRef, useState} from 'react'
+import {CollapsibleItemProps, CollapsibleProps} from 'interfaces'
+import React, {FC, useEffect, useRef, useState} from 'react'
 
+import {ChevronRightIcon} from '../SvgIcons'
 import './collapsible.css'
-
-export interface DataProps {
-  key: number
-  title: string
-  content: string | ReactNode
-}
-export interface CollapsibleProps {
-  data: DataProps[]
-}
-export interface CollapsibleItemProps {
-  item: DataProps
-  activeKey: number
-  setKey: React.Dispatch<React.SetStateAction<number>>
-}
 
 const CollapsibleItem: FC<CollapsibleItemProps> = ({
   item,
   activeKey,
   setKey,
+  itemTitleClassName,
+  itemContentClassName,
+  iconActiveColor,
+  iconInActiveColor,
 }) => {
   const contentRef = useRef(null)
   const [height, setHeight] = useState(0)
@@ -34,30 +26,23 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
   return (
     <>
       <button
-        className="item-title"
+        className={`item-title ${itemTitleClassName}`}
         onClick={() => {
           if (isOpen) setKey(0)
           else setKey(item.key)
         }}
       >
         <p>{item.title}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className={classNames('chevron', {
+
+        <ChevronRightIcon
+          classes={classNames('chevron', {
             'chevron-active': isOpen,
           })}
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-            clipRule="evenodd"
-          />
-        </svg>
+          fillColor={isOpen ? iconActiveColor : iconInActiveColor}
+        />
       </button>
       <div
-        className="item-content"
+        className={`item-content ${itemContentClassName}`}
         style={{
           maxHeight: isOpen ? height : 0,
           transition: `${height}px 0.2s ease-out`,
@@ -71,16 +56,32 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
   )
 }
 
-const Collapsible: FC<CollapsibleProps> = ({data}) => {
+const Collapsible: FC<CollapsibleProps> = ({
+  items,
+  wrapperClassName,
+  itemClassName,
+  itemTitleClassName,
+  itemContentClassName,
+}) => {
   const [activeKey, setKey] = useState(0)
 
   return (
-    <section className="collapsible-wrapper">
-      {data?.map((item, idx) => (
-        <article key={idx} className="item">
-          <CollapsibleItem item={item} activeKey={activeKey} setKey={setKey} />
-        </article>
-      ))}
+    <section className={`wrapper ${wrapperClassName}`}>
+      {items?.map((item, idx) => {
+        const props = {
+          item,
+          activeKey,
+          setKey,
+          itemTitleClassName,
+          itemContentClassName,
+        }
+
+        return (
+          <article key={idx} className={`item ${itemClassName}`}>
+            <CollapsibleItem {...props} />
+          </article>
+        )
+      })}
     </section>
   )
 }

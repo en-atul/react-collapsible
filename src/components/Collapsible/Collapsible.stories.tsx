@@ -14,7 +14,7 @@ const Template: ComponentStory<typeof Collapsible> = args => (
   <Collapsible {...args} />
 )
 
-const data = [
+const items = [
   {
     key: 1,
     title: 'Collapsible One',
@@ -44,7 +44,7 @@ const data = [
 export const Default = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {
-  data,
+  items,
 }
 
 // export const ClickMe = Template.bind({})
