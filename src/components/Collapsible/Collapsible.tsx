@@ -1,7 +1,7 @@
-import classNames from 'classnames'
 import {CollapsibleItemProps, CollapsibleProps} from 'interfaces'
 import React, {FC, useEffect, useRef, useState} from 'react'
 
+import {useWindowSize} from '../../hooks'
 import {ChevronRightIcon} from '../SvgIcons'
 import './collapsible.css'
 
@@ -19,13 +19,15 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
 }) => {
   const contentRef = useRef(null)
   const [height, setHeight] = useState(0)
+  const {windowSize} = useWindowSize()
 
   useEffect(() => {
     const clientHeight = (contentRef?.current as any).clientHeight || undefined
     if (clientHeight) setHeight(clientHeight)
-  }, [])
+  }, [windowSize])
 
   const isOpen = activeKey === item.key
+
   return (
     <>
       <button
@@ -41,9 +43,7 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
           icon(isOpen)
         ) : (
           <ChevronRightIcon
-            classes={classNames('chevron', {
-              'chevron-active': isOpen,
-            })}
+            classes={`chevron ${isOpen ? 'chevron-active' : ''}`}
             fillColor={isOpen ? iconActiveColor : iconInActiveColor}
           />
         )}

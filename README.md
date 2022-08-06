@@ -1,13 +1,16 @@
 ## React Collapsible
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-__React-Collapsible is an animated collapsible/expandable component which is designed for react app.__
+**React-Collapsible is an animated collapsible/expandable component which is
+designed for react app.**
 
-![Alt text](visual/react-collapsible.png?raw=true "React Collapsible")
+![Alt text](visual/react-collapsible.png?raw=true 'React Collapsible')
 
+# Installation
 
-``` js
+```js
  # If you use npm:
  npm i @atul15r/react-collapsible
 
@@ -23,30 +26,52 @@ __React-Collapsible is an animated collapsible/expandable component which is des
 
 ```
 
-
 # Quick Start
 
-![Alt text](visual/react-collapsible.gif?raw=true "React Collapsible")
+![Alt text](visual/react-collapsible.gif?raw=true 'React Collapsible')
 
-
-``` js
-<Collapsible 
- items={items}
-/>
-
+```js
+<Collapsible items={items} />
 ```
 
 # Usage With Custom Icon Component
-   >icon component can be HTMLElement (i.e. svg/image/div/section ...etc)/React-Component
 
-![Alt text](visual/react-collapsible-custom-icon.gif?raw=true "React Collapsible")
+> icon component can be HTMLElement (i.e. svg/image/div/section
+> ...etc)/React-Component
+
+![Alt text](visual/react-collapsible-custom-icon.gif?raw=true 'React Collapsible')
+
+```js
+
+import React from 'react';
+import { Collapsible } from 'react-collapsible';
+
+const items = [
+  {
+    key: 1,
+    title: "Gain The Competitive Advantage",
+    desc:
+      "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+  },
+  {
+    key: 2,
+    title: "Learn The Ins & Outs Of Microservices",
+    desc:
+      "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+  },
+];
 
 
-``` js
-<Collapsible 
- items={items}
- icon={(isOpen)=> <IconComponent isOpen={isOpen}/>}
-/>
+const App = () => {
+  return (
+    <Collapsible 
+      items={items} 
+      icon={(isOpen: boolean) => <IconComponent isOpen={isOpen} />} 
+    />
+  );
+};
+
+export default App;
 
 ```
 
@@ -54,18 +79,18 @@ __React-Collapsible is an animated collapsible/expandable component which is des
 
 - Purple
 
-![Alt text](visual/react-collapsible-purple.gif?raw=true "React Collapsible")
+![Alt text](visual/react-collapsible-purple.gif?raw=true 'React Collapsible')
 
-``` js
-<Collapsible 
+```js
+<Collapsible
  items={items}
  itemTitleStyle={{
          background: `repeating-radial-gradient(
-    circle,
-    purple,
-    purple 10px,
-    #4b026f 10px,
-    #4b026f 20px
+         circle,
+         purple,
+         purple 10px,
+         #4b026f 10px,
+         #4b026f 20px
   )`,
   font-weight: 500,
   color: "#fff"
@@ -78,10 +103,10 @@ __React-Collapsible is an animated collapsible/expandable component which is des
 
 - Fade Yellow
 
-![Alt text](visual/react-collapsible-yellow.gif?raw=true "React Collapsible")
+![Alt text](visual/react-collapsible-yellow.gif?raw=true 'React Collapsible')
 
-``` js
-<Collapsible 
+```js
+<Collapsible
  items={items}
  itemTitleStyle={{
         background: `repeating-linear-gradient(
@@ -101,20 +126,19 @@ __React-Collapsible is an animated collapsible/expandable component which is des
 
 ```
 
-
 # Props
 
-| name                 | type   | required | default   | description                                                                                                                                          |
-|----------------------|--------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| items                | array  | true     | []        | it takes an array of object    eg:    `{     key: number     title: string     content: string \| ReactNode   }[]`                                   |
-| wrapperClassName     | string | false    | undefined | add any custom class you want                                                                                                                        |
-| wrapperStyle         | object | false    | undefined | eg:         `wrapperStyle=  {{                    background:"#ccc",                    color:"#999",                    ...etc                  }}` |
-| itemClassName        | string | false    | undefined | add any custom class you want                                                                                                                        |
-| itemStyle            | object | false    | undefined | eg:      `itemStyle=  {{             padding:5                }} `                                                                                   |
-| itemTitleClassName   | string | false    | undefined | add any custom class you want eg: "text-lg italic" ...etc                                                                                            |
-| itemTitleStyle       | object | false    | undefined | eg:         `itemTitleStyle=  {{         fontSize:12        }}`                                                                                      |
-| itemContentClassName | string | false    | undefined | add any custom class you want eg: "p-4 mx-3" ...etc                                                                                                  |
-| itemContentStyle     | object | false    | undefined | eg:    `itemContentStyle= {{        padding:"4px 12px",       background:"#fefefe"     }}`                                                           |
-| iconActiveColor      | string | false    | undefined | eg: black                                                                                                                                            |
-| iconInActiveColor    | string | false    | undefined | eg: gray, #039af4                                                                                                                                    |
-| icon                 | func   | false    | undefined | eg:   `<Collapsible  icon={(isOpen:boolean) => <IconComponent isOpen={isOpen}/>} />`                                                                 |
+| name                 | type   | required | default   | description                                                                                    |
+| -------------------- | ------ | -------- | --------- | ---------------------------------------------------------------------------------------------- |
+| items                | array  | true     | []        | it takes an array of object eg: `{ key: number title: string content: string \| ReactNode }[]` |
+| wrapperClassName     | string | false    | undefined | add any custom class you want                                                                  |
+| wrapperStyle         | object | false    | undefined | eg: `wrapperStyle= {{ background:"#ccc", color:"#999", ...etc }}`                              |
+| itemClassName        | string | false    | undefined | add any custom class you want                                                                  |
+| itemStyle            | object | false    | undefined | eg: `itemStyle= {{ padding:5 }} `                                                              |
+| itemTitleClassName   | string | false    | undefined | add any custom class you want eg: "text-lg italic" ...etc                                      |
+| itemTitleStyle       | object | false    | undefined | eg: `itemTitleStyle= {{ fontSize:12 }}`                                                        |
+| itemContentClassName | string | false    | undefined | add any custom class you want eg: "p-4 mx-3" ...etc                                            |
+| itemContentStyle     | object | false    | undefined | eg: `itemContentStyle= {{ padding:"4px 12px", background:"#fefefe" }}`                         |
+| iconActiveColor      | string | false    | undefined | eg: black                                                                                      |
+| iconInActiveColor    | string | false    | undefined | eg: gray, #039af4                                                                              |
+| icon                 | func   | false    | undefined | eg: `<Collapsible icon={(isOpen:boolean) => <IconComponent isOpen={isOpen}/>} />`              |
