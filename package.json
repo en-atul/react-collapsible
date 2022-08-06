@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-collapsible"
   },
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Collapsible Component for React",
   "scripts": {
     "build-storybook": "build-storybook",
