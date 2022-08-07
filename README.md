@@ -6,6 +6,8 @@
 **React-Collapsible is an animated collapsible/expandable component which is
 designed for react app.**
 
+**[Live Demo](https://codesandbox.io/s/t-react-collapsible-zcrjlw?file=/src/App.js)**
+
 ![Alt text](visual/react-collapsible.png?raw=true 'React Collapsible')
 
 # Installation
@@ -28,18 +30,18 @@ designed for react app.**
 
 # Quick Start
 
-![Alt text](visual/react-collapsible.gif?raw=true 'React Collapsible')
+![Alt text](visual/react-collapsible-simple.gif?raw=true 'React Collapsible')
 
 ```js
 <Collapsible items={items} />
 ```
 
-# Usage With Custom Icon Component
+# Usage With Custom Styles
 
 > icon component can be HTMLElement (i.e. svg/image/div/section
 > ...etc)/React-Component
 
-![Alt text](visual/react-collapsible-custom-icon.gif?raw=true 'React Collapsible')
+![Alt text](visual/react-collapsible-black.gif?raw=true 'React Collapsible')
 
 ```js
 
@@ -64,25 +66,7 @@ const items = [
 
 const App = () => {
   return (
-    <Collapsible 
-      items={items} 
-      icon={(isOpen: boolean) => <IconComponent isOpen={isOpen} />} 
-    />
-  );
-};
-
-export default App;
-
-```
-
-# Usage With Custom Styles
-
-- Purple
-
-![Alt text](visual/react-collapsible-purple.gif?raw=true 'React Collapsible')
-
-```js
-<Collapsible
+   <Collapsible
  items={items}
  itemTitleStyle={{
          background: `repeating-radial-gradient(
@@ -98,33 +82,15 @@ export default App;
  iconActiveColor="#fff"
  iconInActiveColor="#fff"
 />
+  );
+};
+
+export default App;
 
 ```
 
-- Fade Yellow
 
-![Alt text](visual/react-collapsible-yellow.gif?raw=true 'React Collapsible')
 
-```js
-<Collapsible
- items={items}
- itemTitleStyle={{
-        background: `repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 10px,
-        rgba(0, 0, 0, 0.3) 10px,
-        rgba(0, 0, 0, 0.3) 20px
-  ),
-  url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/3/old_map_@2X.png)`,
-  font-weight: 600,
-  color: "#000"
- }}
- iconActiveColor="#000"
- iconInActiveColor="#000"
-/>
-
-```
 
 # Props
 

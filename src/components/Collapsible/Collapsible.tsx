@@ -5,17 +5,7 @@ import {CollapsibleItemProps, CollapsibleProps} from '../../interfaces'
 import {ChevronRightIcon} from '../SvgIcons'
 import './collapsible.css'
 
-const CollapsibleItem: FC<CollapsibleItemProps> = ({
-  item,
-  activeKey,
-  setKey,
-  itemTitleClassName,
-  itemContentClassName,
-  itemTitleStyle,
-  itemContentStyle,
-  icon,
-  iconStyle,
-}) => {
+const CollapsibleItem: FC<CollapsibleItemProps> = props => {
   const contentRef = useRef(null)
   const [height, setHeight] = useState(0)
   const {windowSize} = useWindowSize()
@@ -23,7 +13,19 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
   useEffect(() => {
     const clientHeight = (contentRef?.current as any).clientHeight || undefined
     if (clientHeight) setHeight(clientHeight)
-  }, [windowSize])
+  }, [windowSize, props])
+
+  const {
+    item,
+    activeKey,
+    setKey,
+    itemTitleClassName,
+    itemContentClassName,
+    itemTitleStyle,
+    itemContentStyle,
+    icon,
+    iconStyle,
+  } = props
 
   const isOpen = activeKey === item.key
 
