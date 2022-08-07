@@ -1,7 +1,7 @@
-import {CollapsibleItemProps, CollapsibleProps} from 'interfaces'
 import React, {FC, useEffect, useRef, useState} from 'react'
 
 import {useWindowSize} from '../../hooks'
+import {CollapsibleItemProps, CollapsibleProps} from '../../interfaces'
 import {ChevronRightIcon} from '../SvgIcons'
 import './collapsible.css'
 

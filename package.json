@@ -3,8 +3,8 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-collapsible"
   },
-  "version": "0.0.3",
-  "description": "Collapsible Component for React",
+  "version": "0.0.1",
+  "description": "React Collapsible Component",
   "scripts": {
     "build-storybook": "build-storybook",
     "lint": "concurrently --kill-others-on-fail --names eslint,stylelint,prettier --prefix-colors \"bgGreen.white.bold,bgBlue.white.bold,bgMagenta.white.bold\" \"yarn lint:scripts\" \"yarn lint:styles\" \"yarn prettier:check\"",
@@ -20,10 +20,8 @@
   "author": "atul",
   "license": "MIT",
   "keywords": [
-    "react",
     "react-collapsible",
     "react-expandable",
-    "react-animated-collapsible",
     "collapsible",
     "accordion"
   ],
