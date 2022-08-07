@@ -14,28 +14,26 @@ const Template: ComponentStory<typeof Collapsible> = args => (
   <Collapsible {...args} />
 )
 
-const content = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
-
 const items = [
   {
     key: 1,
-    title: 'Collapsible One',
-    content,
+    title: 'Gain The Competitive Advantage',
+    content: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
   },
   {
     key: 2,
-    title: 'Collapsible Two',
-    content,
+    title: 'Learn The Ins & Outs Of Microservices',
+    content: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
   },
   {
     key: 3,
-    title: 'Collapsible Three',
-    content,
+    title: 'Rollup is a module bundler for JavaScript',
+    content: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
   },
   {
     key: 4,
-    title: 'Collapsible Four',
-    content,
+    title: 'CoffeeScript is a programming language',
+    content: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.',
   },
 ]
 
