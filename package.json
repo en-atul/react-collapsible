@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-collapsible"
   },
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "React Collapsible Component",
   "scripts": {
     "lint": "concurrently --kill-others-on-fail --names eslint,stylelint,prettier --prefix-colors \"bgGreen.white.bold,bgBlue.white.bold,bgMagenta.white.bold\" \"yarn lint:scripts\" \"yarn lint:styles\" \"yarn prettier:check\"",
