@@ -3,10 +3,9 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-collapsible"
   },
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "React Collapsible Component",
   "scripts": {
-    "build-storybook": "build-storybook",
     "lint": "concurrently --kill-others-on-fail --names eslint,stylelint,prettier --prefix-colors \"bgGreen.white.bold,bgBlue.white.bold,bgMagenta.white.bold\" \"yarn lint:scripts\" \"yarn lint:styles\" \"yarn prettier:check\"",
     "lint:scripts": "eslint --ext .ts,.tsx src",
     "lint:styles": "stylelint 'src/**/*.tsx'",
@@ -14,8 +13,9 @@
     "prettier:check": "prettier --check '{**/*,*}.{cjs,mjs,ts,tsx,json}'",
     "prepare": "husky install",
     "rollup": "rollup -c",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "test": "jest"
+    "build-storybook": "build-storybook"
   },
   "author": "atul",
   "license": "MIT",
@@ -45,10 +45,10 @@
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
-    "@storybook/builder-webpack4": "^6.5.10",
-    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/testing-library": "0.0.13",
     "@testing-library/react": "^13.3.0",
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
     "@types/jest": "^28.1.6",
@@ -95,5 +95,6 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {}
 }

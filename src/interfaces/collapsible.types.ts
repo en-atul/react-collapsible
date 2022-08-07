@@ -11,9 +11,13 @@ export interface StyleProps {
   itemTitleStyle?: CSSProperties
   itemContentClassName?: string
   itemContentStyle?: CSSProperties
-  iconActiveColor?: string
-  iconInActiveColor?: string
   icon?: (isOpen: boolean) => ReactNode
+  iconStyle?: {
+    activeColor: string
+    inactiveColor: string
+    width: number
+    height: number
+  }
 }
 
 export interface CollapsibleItemProps extends StyleProps {
