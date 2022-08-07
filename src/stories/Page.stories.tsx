@@ -1,7 +1,8 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
-import { Page } from './Page';
+import {ComponentMeta, ComponentStory} from '@storybook/react'
+import {userEvent, within} from '@storybook/testing-library'
+import React from 'react'
+
+import {Page} from './Page'
 
 export default {
   title: 'Example/Page',
@@ -9,6 +10,4 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Page>;
-
-
+} as ComponentMeta<typeof Page>
