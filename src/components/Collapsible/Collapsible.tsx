@@ -11,11 +11,10 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
   setKey,
   itemTitleClassName,
   itemContentClassName,
-  iconActiveColor,
-  iconInActiveColor,
-  icon,
   itemTitleStyle,
   itemContentStyle,
+  icon,
+  iconStyle,
 }) => {
   const contentRef = useRef(null)
   const [height, setHeight] = useState(0)
@@ -44,7 +43,11 @@ const CollapsibleItem: FC<CollapsibleItemProps> = ({
         ) : (
           <ChevronRightIcon
             classes={`chevron ${isOpen ? 'chevron-active' : ''}`}
-            fillColor={isOpen ? iconActiveColor : iconInActiveColor}
+            fillColor={
+              isOpen ? iconStyle?.activeColor : iconStyle?.inactiveColor
+            }
+            width={iconStyle?.width}
+            height={iconStyle?.height}
           />
         )}
       </button>

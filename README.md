@@ -128,17 +128,16 @@ export default App;
 
 # Props
 
-| name                 | type   | required | default   | description                                                                                    |
-| -------------------- | ------ | -------- | --------- | ---------------------------------------------------------------------------------------------- |
-| items                | array  | true     | []        | it takes an array of object eg: `{ key: number title: string content: string \| ReactNode }[]` |
-| wrapperClassName     | string | false    | undefined | add any custom class you want                                                                  |
-| wrapperStyle         | object | false    | undefined | eg: `wrapperStyle= {{ background:"#ccc", color:"#999", ...etc }}`                              |
-| itemClassName        | string | false    | undefined | add any custom class you want                                                                  |
-| itemStyle            | object | false    | undefined | eg: `itemStyle= {{ padding:5 }} `                                                              |
-| itemTitleClassName   | string | false    | undefined | add any custom class you want eg: "text-lg italic" ...etc                                      |
-| itemTitleStyle       | object | false    | undefined | eg: `itemTitleStyle= {{ fontSize:12 }}`                                                        |
-| itemContentClassName | string | false    | undefined | add any custom class you want eg: "p-4 mx-3" ...etc                                            |
-| itemContentStyle     | object | false    | undefined | eg: `itemContentStyle= {{ padding:"4px 12px", background:"#fefefe" }}`                         |
-| iconActiveColor      | string | false    | undefined | eg: black                                                                                      |
-| iconInActiveColor    | string | false    | undefined | eg: gray, #039af4                                                                              |
-| icon                 | func   | false    | undefined | eg: `<Collapsible icon={(isOpen:boolean) => <IconComponent isOpen={isOpen}/>} />`              |
+| name                 | type   | required | default   | description                                                                                                                                     |
+|----------------------|--------|----------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| items                | array  | true     | []        | it takes an array of object       `{     key: number     title: string     content: string \| ReactNode   }[]`                                  |
+| wrapperClassName     | string | false    | undefined | add any custom class you want                                                                                                                   |
+| wrapperStyle         | object | false    | undefined |        `wrapperStyle=  {{                    background:"#ccc",                    color:"#999",                    ...etc                  }}` |
+| itemClassName        | string | false    | undefined | add any custom class you want                                                                                                                   |
+| itemStyle            | object | false    | undefined |  `   itemStyle= {{        padding:4, }}`                                                                                                        |
+| itemTitleClassName   | string | false    | undefined | add any custom class you want eg: "text-lg italic" ...etc                                                                                       |
+| itemTitleStyle       | object | false    | undefined |         `itemTitleStyle=  {{         fontSize:12        }}`                                                                                     |
+| itemContentClassName | string | false    | undefined | add any custom class you want eg: "p-4 mx-3" ...etc                                                                                             |
+| itemContentStyle     | object | false    | undefined |    `itemContentStyle= {{        padding:"4px 12px",       background:"#fefefe"     }}`                                                          |
+| icon                 | func   | false    | undefined |  `<Collapsible  icon={(isOpen:boolean) => <IconComponent isOpen={isOpen}/>} />`                                                                 |
+| iconStyle            | object | false    | undefined |  `   iconStyle= {{      activeColor:"#fff",      inactiveColor: "#fff",      width: 20,      height: 20   }} `                                  |
