@@ -46,19 +46,19 @@ designed for react app.**
 ```js
 
 import React from 'react';
-import { Collapsible } from 'react-collapsible';
+import { Collapsible } from '@atul15r/react-collapsible';
 
 const items = [
   {
     key: 1,
     title: "Gain The Competitive Advantage",
-    desc:
+    content:
       "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
   },
   {
     key: 2,
     title: "Learn The Ins & Outs Of Microservices",
-    desc:
+    content:
       "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
   },
 ];
