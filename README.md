@@ -93,7 +93,7 @@ export default App;
 
 | name                 | type   | required | default   | description                                                                                |
 | -------------------- | ------ | -------- | --------- | ------------------------------------------------------------------------------------------ |
-| items                | array  | true     | []        | it takes an array of object `{ key: number title: string content: string \| ReactNode }[]` |
+| items                | array  | true     | []        | it takes an array of object `{ key: number title: ReactNode content: string \| ReactNode }[]` |
 | wrapperClassName     | string | false    | undefined | add any custom class you want                                                              |
 | wrapperStyle         | object | false    | undefined | `wrapperStyle= {{ background:"#ccc", color:"#999", ...etc }}`                              |
 | itemClassName        | string | false    | undefined | add any custom class you want                                                              |

@@ -28,7 +28,8 @@ const CollapsibleItem: FC<CollapsibleItemProps> = props => {
   } = props
 
   const isOpen = activeKey === item.key
-
+  const ContentComponent = item.content as React.ElementType
+  const TitleComponent = item.title as React.ElementType
   return (
     <>
       <button
@@ -39,7 +40,9 @@ const CollapsibleItem: FC<CollapsibleItemProps> = props => {
         }}
         style={itemTitleStyle}
       >
-        <p>{item.title}</p>
+        <p>
+          {typeof item.title === 'string' ? item.title : <TitleComponent />}
+        </p>
         {icon ? (
           icon(isOpen)
         ) : (
@@ -65,7 +68,13 @@ const CollapsibleItem: FC<CollapsibleItemProps> = props => {
           ...itemContentStyle,
         }}
       >
-        <div ref={contentRef}>{item.content}</div>
+        <div ref={contentRef}>
+          {typeof item.content === 'string' ? (
+            item.content
+          ) : (
+            <ContentComponent />
+          )}
+        </div>
       </div>
     </>
   )

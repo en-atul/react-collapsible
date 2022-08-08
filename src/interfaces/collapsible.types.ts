@@ -2,7 +2,7 @@ import {CSSProperties, ReactNode} from 'react'
 
 export interface ItemProps {
   key: number
-  title: string
+  title: ReactNode
   content: ReactNode
 }
 
