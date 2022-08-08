@@ -6,7 +6,7 @@
 **React-Collapsible is an animated collapsible/expandable component which is
 designed for react app.**
 
-**[Live Demo](https://codesandbox.io/s/t-react-collapsible-zcrjlw?file=/src/App.js)**
+**[Live Demo](https://codesandbox.io/s/atul15r-react-collapsible-zcrjlw)**
 
 ![Alt text](visual/react-collapsible.png?raw=true 'React Collapsible')
 
