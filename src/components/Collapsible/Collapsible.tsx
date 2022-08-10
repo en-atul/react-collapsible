@@ -13,7 +13,7 @@ const CollapsibleItem: FC<CollapsibleItemProps> = props => {
   useEffect(() => {
     const clientHeight = (contentRef?.current as any).clientHeight || undefined
     if (clientHeight) setHeight(clientHeight)
-  }, [windowSize, props])
+  }, [windowSize, props, contentRef])
 
   const {
     item,
