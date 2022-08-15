@@ -1,6 +1,7 @@
 ## React Collapsible
 
-![Build](https://github.com/atul15r/react-collapsible/actions/workflows/main.yml/badge.svg)
+<!-- ![Build](https://github.com/atul15r/react-collapsible/actions/workflows/main.yml/badge.svg) -->
+
 ![Download](https://img.shields.io/npm/dt/@atul15r/react-collapsible.svg)
 
 **React-Collapsible is an animated collapsible/expandable component which is
@@ -8,7 +9,7 @@ designed for react app.**
 
 **[Live Demo](https://codesandbox.io/s/atul15r-react-collapsible-zcrjlw)**
 
-![Alt text](visual/react-collapsible.png?raw=true 'React Collapsible')
+![Alt text](visual/react-collapsible-purple.gif?raw=true 'React Collapsible')
 
 # Installation
 
